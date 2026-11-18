@@ -726,12 +726,8 @@ h1 {
 }
 .figures dt { font-size: 0.8125rem; color: var(--ink-3); }
 
-/* Live Cloudflare numbers (hidden until /api/stats answers) */
-.live-stats {
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  background: var(--surface-2);
-}
+/* Live Cloudflare numbers: the project's only figures, hidden until /api/stats answers */
+.live-stats { padding: 4px 0 2px; }
 .live-stats__label {
   display: flex;
   align-items: center;
@@ -744,17 +740,19 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: start;
-  gap: 4px clamp(16px, 4vw, 32px);
+  gap: 4px clamp(16px, 4vw, 36px);
   margin-top: 8px;
 }
 .live-stats__grid > div { display: flex; flex-direction: column-reverse; }
 .live-stats__grid dd {
   font-family: var(--mono);
-  font-size: 1.0625rem;
+  font-size: clamp(1.125rem, 0.9rem + 1.2vw, 1.5rem);
   font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
-.live-stats__grid dt { font-size: 0.75rem; color: var(--ink-3); }
+.live-stats__grid dt { font-size: 0.8125rem; color: var(--ink-3); }
 
 .stack { display: flex; flex-wrap: wrap; gap: 6px; }
 .stack li {
