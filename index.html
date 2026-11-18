@@ -1,746 +1,437 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdullah Al Noman | Portfolio</title>
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" id="skin-link" href="css/skins/color-1.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- Main Container Start -->
-    <div class="main-container">
-      <!-- Mobile Topbar -->
-      <div class="mobile-topbar">
-        <div class="mobile-logo">
-          <a href="#"><span>N</span>oman</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdullah Al Noman | Backend and AI Engineer</title>
+  <meta name="description" content="Abdullah Al Noman builds backend and AI systems in Dhaka: an AI-assisted programming lab evaluation platform now in pilot at Daffodil International University, and Admission Informer, as its Developer and Development Partner.">
+  <link rel="canonical" href="https://abdnoman.netlify.app/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Abdullah Al Noman | Backend and AI Engineer">
+  <meta property="og:description" content="Builds an AI-assisted lab evaluation platform in pilot at DIU, and Admission Informer. Backend and AI Engineer working with Django, FastAPI and Gemma.">
+  <meta property="og:url" content="https://abdnoman.netlify.app/">
+  <meta property="og:image" content="https://abdnoman.netlify.app/assets/avatar.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#f7f8f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+
+  <script>
+    // Apply the saved theme before first paint so the page never flashes.
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="page">
+    <header class="profile">
+      <div class="cover">
+        <figure class="cover__card">
+          <img class="cover__chart"
+               src="https://ghchart.rshah.org/16A34A/nomancsediu"
+               alt="GitHub contribution chart for nomancsediu over the past twelve months"
+               width="663" height="104" decoding="async"
+               onerror="this.closest('.cover').classList.add('cover--no-chart')">
+          <figcaption>
+            <a href="https://github.com/nomancsediu">github.com/nomancsediu</a><span class="cover__when">, last twelve months</span>
+          </figcaption>
+        </figure>
+
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+
+      <div class="identity">
+        <img class="avatar" src="assets/avatar.jpg" width="168" height="168" alt="Abdullah Al Noman">
+
+        <div class="identity__text">
+          <h1>Abdullah Al Noman</h1>
+          <p class="role">Backend and AI Engineer. 2x Hackathon Winner. Building <a href="https://semicolons.abdnoman.com">Lab Evaluation Platform</a> and <a href="https://admissioninformer.com">Admission Informer</a>.</p>
+          <ul class="links">
+            <li class="links__place">Dhaka, Bangladesh</li>
+            <li><a href="https://github.com/nomancsediu">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/nomanit">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@allaboutsemicolons">YouTube</a></li>
+          </ul>
         </div>
-        <div class="nav-toggler" id="nav-toggler">
-          <span></span>
+
+        <div class="actions">
+          <a class="btn btn--primary" href="mailto:abdnoman093@gmail.com">Email me</a>
+          <a class="btn" href="assets/Abdullah_Al_Noman_Resume.pdf" download>Download resume</a>
         </div>
       </div>
 
-      <!-- Overlay -->
-      <div class="nav-overlay" id="nav-overlay"></div>
-
-      <!-- Aside Part Start -->
-      <div class="aside">
-        <div class="logo">
-          <a href="#"><span>N</span>oman</a>
+      <nav class="tabs" aria-label="Sections">
+        <div class="tabs__list" role="tablist">
+          <a class="tab" role="tab" href="#overview" id="tab-overview" aria-controls="overview">Overview</a>
+          <a class="tab" role="tab" href="#projects" id="tab-projects" aria-controls="projects">Projects</a>
+          <a class="tab" role="tab" href="#awards" id="tab-awards" aria-controls="awards">Awards</a>
+          <a class="tab" role="tab" href="#contact" id="tab-contact" aria-controls="contact">Contact</a>
         </div>
+      </nav>
+    </header>
 
-        <ul class="nav">
-          <li>
-            <a href="#" class="active"> <i class="fa fa-home"></i> Home </a>
-          </li>
+    <div class="layout">
+      <aside class="side" aria-label="Experience and education">
+        <section class="side__block">
+          <h2 class="side__title">Experience</h2>
+          <ol class="timeline">
+            <li class="timeline__item timeline__item--now">
+              <p class="timeline__role">Developer, Final Year Design Project</p>
+              <p class="timeline__org"><a href="https://semicolons.abdnoman.com">AI-Assisted Lab Evaluation Platform</a></p>
+              <p class="timeline__when"><span class="live-dot" aria-hidden="true"></span>Pilot running at DIU</p>
+            </li>
+            <li class="timeline__item timeline__item--now">
+              <p class="timeline__role">Developer and Development Partner</p>
+              <p class="timeline__org"><a href="https://admissioninformer.com">Admission Informer</a></p>
+              <p class="timeline__when"><span class="live-dot" aria-hidden="true"></span>Live, serving students</p>
+            </li>
+            <li class="timeline__item timeline__item--now">
+              <p class="timeline__role">Tech Content Creator</p>
+              <p class="timeline__org"><a href="https://www.youtube.com/@allaboutsemicolons">Semicolons on YouTube</a></p>
+              <p class="timeline__when">2025 to now</p>
+            </li>
+            <li class="timeline__item">
+              <p class="timeline__role">Campus Ambassador</p>
+              <p class="timeline__org">Phitron 2.0, DIU</p>
+              <p class="timeline__when">2025 to 2026</p>
+            </li>
+            <li class="timeline__item">
+              <p class="timeline__role">System Administrator and Platform Developer</p>
+              <p class="timeline__org">DIU CIS programming contest</p>
+              <p class="timeline__when">Nov 2025</p>
+            </li>
+          </ol>
+        </section>
 
-          <li>
-            <a href="#"> <i class="fa fa-user"></i> About </a>
-          </li>
+        <section class="side__block">
+          <h2 class="side__title">Education</h2>
+          <ol class="timeline">
+            <li class="timeline__item timeline__item--now">
+              <p class="timeline__role">B.Sc. in Computer Science and Engineering</p>
+              <p class="timeline__org">Daffodil International University</p>
+              <p class="timeline__when">2023 to 2027, CGPA 3.60</p>
+            </li>
+            <li class="timeline__item">
+              <p class="timeline__role">Higher Secondary Certificate, Science</p>
+              <p class="timeline__org">Kushtia Govt. College</p>
+              <p class="timeline__when">2020 to 2022</p>
+            </li>
+          </ol>
+        </section>
+      </aside>
 
-          <li>
-            <a href="#"> <i class="fa fa-list"></i> Skills </a>
-          </li>
+      <main id="main" class="panels">
+        <!-- Overview -->
+        <section class="panel" id="overview" role="tabpanel" aria-labelledby="tab-overview">
+          <h2 class="panel__title">About</h2>
+          <div class="prose">
+            <p>CSE student at Daffodil International University. I build backend and AI systems that real people use: <a href="https://semicolons.abdnoman.com">Lab Evaluation Platform</a>, my Final Year Design Project now in pilot at DIU, and <a href="https://admissioninformer.com">Admission Informer</a>, which has served 280,000+ requests.</p>
+            <p>I share what I learn about backend and AI engineering on my YouTube channel, Semicolons.</p>
+          </div>
 
-          <li>
-            <a href="#"> <i class="fa fa-briefcase"></i> Projects </a>
-          </li>
+          <h2 class="panel__title">What I work with</h2>
+          <dl class="skills">
+            <div>
+              <dt>Backend</dt>
+              <dd>
+                <ul class="chips" aria-label="Backend tools"><li>Python</li><li>Django</li><li>Django REST Framework</li><li>FastAPI</li><li>Celery</li><li>Redis</li><li>REST APIs</li></ul>
+                <p class="used">Used in <a href="#projects">Lab Evaluation Platform</a>, <a href="#projects">Admission Informer</a>, <a href="#projects">BoardSnap</a>, <a href="#projects">Semicolons Online Judge</a></p>
+              </dd>
+            </div>
+            <div>
+              <dt>AI Engineering</dt>
+              <dd>
+                <ul class="chips" aria-label="AI Engineering tools"><li>LLM Integration</li><li>Gemma Vision</li><li>LangChain</li><li>LangGraph</li><li>RAG</li><li>Prompt Engineering</li></ul>
+                <p class="used">Used in <a href="#projects">Admission Informer</a>, <a href="#projects">BoardSnap</a>, <a href="#projects">Lab Evaluation Platform</a></p>
+              </dd>
+            </div>
+            <div>
+              <dt>Databases</dt>
+              <dd>
+                <ul class="chips" aria-label="Databases tools"><li>PostgreSQL</li><li>MySQL</li></ul>
+                <p class="used">Used in <a href="#projects">Lab Evaluation Platform</a>, <a href="#projects">Semicolons Online Judge</a></p>
+              </dd>
+            </div>
+            <div>
+              <dt>Frontend</dt>
+              <dd>
+                <ul class="chips" aria-label="Frontend tools"><li>React</li><li>Next.js</li><li>Tailwind CSS</li></ul>
+                <p class="used">Used in <a href="#projects">Admission Informer</a>, <a href="#projects">BoardSnap</a></p>
+              </dd>
+            </div>
+            <div>
+              <dt>Cloud and DevOps</dt>
+              <dd>
+                <ul class="chips" aria-label="Cloud and DevOps tools"><li>AWS</li><li>Docker</li><li>Linux</li><li>Cloudflare</li><li>Git</li><li>GitHub</li></ul>
+                <p class="used">Used in <a href="#projects">Lab Evaluation Platform</a>, <a href="#projects">Admission Informer</a></p>
+              </dd>
+            </div>
+          </dl>
 
-          <li>
-            <a href="#"> <i class="fa fa-trophy"></i> Achievements </a>
-          </li>
+          <h2 class="panel__title">Elsewhere</h2>
+          <ul class="elsewhere">
+            <li>
+              <a href="https://www.youtube.com/@allaboutsemicolons">Semicolons on YouTube</a>
+              <span>Three finished playlists on backend development and AI engineering. The Facebook page has 3.5K+ followers.</span>
+            </li>
+            <li>
+              <a href="https://codeforces.com/profile/nomanexists">Codeforces: nomanexists</a>
+              <span>30+ programming contests and 5+ hackathons so far.</span>
+            </li>
+          </ul>
+        </section>
 
-          <li>
-            <a href="#"> <i class="fa fa-comments"></i> Contact </a>
-          </li>
+        <!-- Projects -->
+        <section class="panel" id="projects" role="tabpanel" aria-labelledby="tab-projects">
+          <h2 class="panel__title">Projects</h2>
+
+          <article class="project project--lead">
+            <a class="project__shot" href="https://semicolons.abdnoman.com" tabindex="-1" aria-hidden="true">
+              <img src="assets/shots/semicolons-labs-840.webp" srcset="assets/shots/semicolons-labs-840.webp 840w, assets/shots/semicolons-labs.webp 1680w" sizes="(min-width: 960px) 760px, 100vw" width="1680" height="721" loading="lazy" alt="">
+            </a>
+            <div class="project__body">
+              <header class="project__head">
+                <h3>AI-Assisted Programming Lab Evaluation Platform</h3>
+                <p class="status status--live"><span class="live-dot" aria-hidden="true"></span>Pilot at DIU</p>
+              </header>
+              <p class="project__role">Final Year Design Project, Pilot at Daffodil International University</p>
+              <p>Students write lab code in the browser and a sandboxed judge runs every test in an isolated container. Failed cases get rubric-based partial marks instead of a flat zero. Teachers follow submissions and tab switches live, and each student gets practice problems on the topics they missed.</p>
+              <ul class="stack" aria-label="Built with">
+                <li>Django REST Framework</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>AWS</li><li>Cloudflare</li>
+              </ul>
+              <p class="project__links"><a href="https://semicolons.abdnoman.com">Visit semicolons.abdnoman.com</a></p>
+            </div>
+          </article>
+
+          <article class="project project--lead">
+            <a class="project__shot" href="https://admissioninformer.com" tabindex="-1" aria-hidden="true">
+              <img src="assets/shots/admission-informer-840.webp" srcset="assets/shots/admission-informer-840.webp 840w, assets/shots/admission-informer.webp 1680w" sizes="(min-width: 960px) 760px, 100vw" width="1680" height="776" loading="lazy" alt="">
+            </a>
+            <div class="project__body">
+              <header class="project__head">
+                <h3>Admission Informer</h3>
+                <p class="status status--live"><span class="live-dot" aria-hidden="true"></span>Live</p>
+              </header>
+              <p class="project__role">Developer and Development Partner</p>
+              <p>A Bangla-language site for students applying to Bangladeshi universities: admission circulars, application deadlines, eligibility checks and a GPA checker in one place. Gemma Vision reads circulars from images and drafts each listing.</p>
+              <dl class="figures">
+                <div><dt>Visits</dt><dd>11,000+</dd></div>
+                <div><dt>Requests served</dt><dd>280,000+</dd></div>
+                <div><dt>5xx error rate</dt><dd>0.01%</dd></div>
+              </dl>
+              <div class="live-stats" hidden>
+                <p class="live-stats__label"><span class="live-dot" aria-hidden="true"></span>Live from Cloudflare, last <span data-stat="days">30</span> days</p>
+                <dl class="live-stats__grid">
+                  <div><dt>Requests</dt><dd data-stat="requests"></dd></div>
+                  <div><dt>Visits</dt><dd data-stat="visits"></dd></div>
+                  <div><dt>5xx error rate</dt><dd data-stat="errorRate"></dd></div>
+                </dl>
+              </div>
+              <ul class="stack" aria-label="Built with">
+                <li>Django REST Framework</li><li>Next.js</li><li>Gemma Vision</li><li>AWS</li><li>Cloudflare</li>
+              </ul>
+              <p class="project__links"><a href="https://admissioninformer.com">Visit admissioninformer.com</a></p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project__shot" href="https://boardsnap.onrender.com" tabindex="-1" aria-hidden="true">
+              <img src="assets/shots/boardsnap-840.webp" srcset="assets/shots/boardsnap-840.webp 840w, assets/shots/boardsnap.webp 1680w" sizes="(min-width: 760px) 360px, 100vw" width="1680" height="944" loading="lazy" alt="">
+            </a>
+            <div class="project__body">
+              <header class="project__head">
+                <h3>BoardSnap</h3>
+                <p class="status status--live"><span class="live-dot" aria-hidden="true"></span>Live</p>
+              </header>
+              <p class="project__role">Team Leader. 2nd Place, Build With Gemma @ Bangladesh</p>
+              <p>Turns a photo of a classroom whiteboard into notes, code, flashcards, a quiz and explanations, in Bangla, English or both.</p>
+              <ul class="stack" aria-label="Built with">
+                <li>FastAPI</li><li>React</li><li>Gemma Vision</li>
+              </ul>
+              <p class="project__links">
+                <a href="https://boardsnap.onrender.com">Try BoardSnap</a>
+                <a href="https://www.kaggle.com/competitions/build-with-gemma-bangladesh/writeups/boardsnap-whiteboard-to-interactive-study-guide">Read the Kaggle writeup</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project__shot" href="https://semicolons.pythonanywhere.com" tabindex="-1" aria-hidden="true">
+              <img src="assets/shots/semicolons-oj-840.webp" srcset="assets/shots/semicolons-oj-840.webp 840w, assets/shots/semicolons-oj.webp 1680w" sizes="(min-width: 760px) 360px, 100vw" width="1680" height="794" loading="lazy" alt="">
+            </a>
+            <div class="project__body">
+              <header class="project__head">
+                <h3>Semicolons Online Judge</h3>
+                <p class="status status--live"><span class="live-dot" aria-hidden="true"></span>Live</p>
+              </header>
+              <p class="project__role">Platform Developer and System Administrator</p>
+              <p>An online judge for C and C++ with automatic code evaluation, contest management and a live leaderboard. The DIU CIS department ran its November 2025 programming contest on it with more than 100 participants.</p>
+              <ul class="stack" aria-label="Built with">
+                <li>Python</li><li>Django</li><li>PostgreSQL</li>
+              </ul>
+              <p class="project__links"><a href="https://semicolons.pythonanywhere.com">Open the judge</a></p>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Awards and certificates -->
+        <section class="panel" id="awards" role="tabpanel" aria-labelledby="tab-awards">
+          <h2 class="panel__title">Awards</h2>
+          <dl class="figures figures--awards">
+            <div><dt>Hackathon wins</dt><dd>2</dd></div>
+            <div><dt>Hackathons</dt><dd>5+</dd></div>
+            <div><dt>Programming contests</dt><dd>30+</dd></div>
+          </dl>
+
+          <ul class="wins">
+            <li class="win">
+              <p class="win__place">2nd Place</p>
+              <h3 class="win__event">Build With Gemma @ Bangladesh</h3>
+              <p class="win__meta">Online track on Kaggle</p>
+              <p class="win__what">Led the team that built <a href="#projects">BoardSnap</a>, which turns whiteboard photos into notes, code, flashcards and quizzes with Gemma Vision.</p>
+              <p class="win__links"><a href="https://www.kaggle.com/competitions/build-with-gemma-bangladesh/writeups/boardsnap-whiteboard-to-interactive-study-guide">Read the Kaggle writeup</a></p>
+            </li>
+            <li class="win">
+              <p class="win__place">Winner</p>
+              <h3 class="win__event">Devpost Build with AI Hack Days @ DIU</h3>
+              <p class="win__meta">Daffodil International University, May 2026</p>
+            </li>
+          </ul>
+
+          <h2 class="panel__title">Recognition</h2>
+          <ul class="awards">
+            <li class="award">
+              <p class="award__place">Jacket Winner</p>
+              <div>
+                <h3>AWS Builder Challenge</h3>
+              </div>
+            </li>
+            <li class="award">
+              <p class="award__place">Recognised</p>
+              <div>
+                <h3>DIU CIS Department</h3>
+                <p>For building and running the platform behind the department's programming contest.</p>
+              </div>
+            </li>
+            <li class="award">
+              <p class="award__place">30+ Contests</p>
+              <div>
+                <h3>Competitive Programming</h3>
+                <p>Codeforces: <a href="https://codeforces.com/profile/nomanexists">nomanexists</a></p>
+              </div>
+            </li>
+          </ul>
+
+          <h2 class="panel__title">Certificates</h2>
+          <ul class="certs">
+            <li>
+              <button class="cert" type="button" data-cert="assets/certs/ostad.webp" data-title="Full Stack Web Development, Ostad">
+                <img src="assets/certs/ostad.webp" width="1400" height="991" loading="lazy" alt="">
+                <span class="cert__name">Full Stack Web Development</span>
+                <span class="cert__by">Ostad. Python, Django and React</span>
+              </button>
+            </li>
+            <li>
+              <button class="cert" type="button" data-cert="assets/certs/aws.webp" data-title="AWS Networking Basics, AWS Training and Certification">
+                <img src="assets/certs/aws.webp" width="800" height="565" loading="lazy" alt="">
+                <span class="cert__name">AWS Networking Basics</span>
+                <span class="cert__by">AWS Training and Certification, May 2025</span>
+              </button>
+            </li>
+            <li>
+              <button class="cert" type="button" data-cert="assets/certs/signature-hackathon.webp" data-title="Signature Hackathon, Programming Hero">
+                <img src="assets/certs/signature-hackathon.webp" width="1400" height="990" loading="lazy" alt="">
+                <span class="cert__name">Signature Hackathon</span>
+                <span class="cert__by">Programming Hero, participant</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact">
+          <h2 class="panel__title">Contact</h2>
+          <p class="lede">I'm open to internships, backend and AI roles, and freelance work. Email gets the fastest reply.</p>
+
+          <dl class="contact-list">
+            <div><dt>Email</dt><dd><a href="mailto:abdnoman093@gmail.com">abdnoman093@gmail.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+8801735223693">+880 1735-223693</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://linkedin.com/in/nomanit">linkedin.com/in/nomanit</a></dd></div>
+          </dl>
+
+          <form class="form" id="contact-form" novalidate>
+            <h3 class="form__title">Or send a message from here</h3>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="from_name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Your email</label>
+              <input id="f-email" name="from_email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field field--wide">
+              <label for="f-subject">Subject</label>
+              <input id="f-subject" name="subject" required>
+            </div>
+            <div class="field field--wide">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--primary" type="submit">Send message</button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer class="foot">
+      <div class="foot__cta">
+        <div>
+          <h2 class="foot__title">Open to internships and backend or AI engineering roles.</h2>
+          <p class="foot__sub">Email gets the fastest reply: <a href="mailto:abdnoman093@gmail.com">abdnoman093@gmail.com</a></p>
+        </div>
+        <div class="foot__actions">
+          <a class="btn btn--primary" href="mailto:abdnoman093@gmail.com">Email me</a>
+          <a class="btn btn--on-dark" href="assets/Abdullah_Al_Noman_Resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+
+      <div class="foot__bar">
+        <p>© 2026 Abdullah Al Noman, Dhaka</p>
+        <ul class="foot__links">
+          <li><a href="https://github.com/nomancsediu">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/nomanit">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@allaboutsemicolons">YouTube</a></li>
+          <li><button class="to-top" type="button">Back to top</button></li>
         </ul>
       </div>
+    </footer>
+  </div>
 
-      <!-- Aside Part End -->
-      <!-- Main Content Start  -->
-      <div class="main-content">
-        <!-- Home Section Start -->
-        <section class="home section">
-          <div class="container">
-            <div class="row">
-              <div class="home-info padd-15">
-                <h3 class="hello">
-                  Hello, My name is <span class="name">Abdullah Al Noman</span>
-                </h3>
-                <h3 class="my-profession">
-                  I'm into <span class="typing"></span>
-                </h3>
-                <div class="home-social">
-                  <a href="https://linkedin.com/in/nomanit" target="_blank"
-                    ><i class="fab fa-linkedin"></i
-                  ></a>
-                  <a href="https://github.com/nomancsediu" target="_blank"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                  <a href="https://facebook.com/nomancsediu" target="_blank"
-                    ><i class="fab fa-facebook"></i
-                  ></a>
-                  <a
-                    href="https://youtube.com/@allaboutsemicolons"
-                    target="_blank"
-                    ><i class="fab fa-youtube"></i
-                  ></a>
-                </div>
-                <a href="#contact" class="btn hire-me">Hire me</a>
-                <a
-                  href="https://drive.google.com/uc?export=download&id=1JVRlKKyXXB4jCYk8m-dk30lQ6JP2qWBJ"
-                  target="_blank"
-                  class="btn"
-                  >Download CV</a
-                >
-              </div>
-              <div class="home-img padd-15">
-                <img src="images/My_Photo.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Home Section End -->
-        <section class="about section">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>About Me</h2>
-              </div>
-            </div>
+  <dialog class="viewer" aria-label="Certificate">
+    <form method="dialog" class="viewer__bar">
+      <p class="viewer__title"></p>
+      <button class="viewer__close" aria-label="Close certificate">Close</button>
+    </form>
+    <img class="viewer__img" alt="">
+  </dialog>
 
-            <!-- Bio + Info Cards -->
-            <div class="row">
-              <div class="about-bio padd-15">
-                <div class="about-bio-top">
-                  <img
-                    src="images/My_Photo.png"
-                    alt="Abdullah Al Noman"
-                    class="about-avatar"
-                  />
-                  <div class="about-bio-info">
-                    <h3>I'm <span>Abdullah Al Noman</span></h3>
-                    <h4>Aspiring Software Engineer</h4>
-                  </div>
-                </div>
-                <p>
-                  I'm a CSE student at Daffodil International University in
-                  Dhaka, Bangladesh. Alongside my studies, I create tech content
-                  on YouTube where I share my learning journey in programming
-                  and web development. I enjoy competitive programming and love
-                  building modern web applications. I'm also exploring Machine
-                  Learning and System Design to expand my skills and knowledge.
-                </p>
-              </div>
-            </div>
-
-            <!-- Education + Experience -->
-            <div class="row edu-exp-row">
-              <div class="education padd-15">
-                <h3 class="title">Education</h3>
-                <div class="timeline-box padd-15">
-                  <div class="timeline shadow-dark">
-                    <div class="timeline-item">
-                      <div class="circle-dot"></div>
-                      <h3 class="timeline-date">
-                        <i class="fa fa-calendar"></i> 2023 - 2027
-                      </h3>
-                      <h4 class="timeline-title">
-                        B.Sc. in Computer Science & Engineering
-                      </h4>
-                      <p class="timeline-text">
-                        Currently pursuing my undergraduate degree, focusing on
-                        software engineering at Daffodil International
-                        University.
-                      </p>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="circle-dot"></div>
-                      <h3 class="timeline-date">
-                        <i class="fa fa-calendar"></i> 2020 - 2022
-                      </h3>
-                      <h4 class="timeline-title">
-                        Higher Secondary Certificate (HSC)
-                      </h4>
-                      <p class="timeline-text">
-                        Completed HSC with a focus on Science, building a strong
-                        foundation in mathematics and logical thinking from
-                        Kushtia Govt. College.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="experience padd-15">
-                <h3 class="title">Experience</h3>
-                <div class="timeline-box padd-15">
-                  <div class="timeline shadow-dark">
-                    <div class="timeline-item">
-                      <div class="circle-dot"></div>
-                      <h3 class="timeline-date">
-                        <i class="fa fa-calendar"></i> November 28, 2025
-                      </h3>
-                      <h4 class="timeline-title">
-                        Online Judge System - Official Contest
-                      </h4>
-                      <p class="timeline-text">
-                        My Semicolons Online Judge system was used officially by
-                        DIU CIS Department for programming contest with 100+
-                        participants.
-                      </p>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="circle-dot"></div>
-                      <h3 class="timeline-date">
-                        <i class="fa fa-calendar"></i> 2025 - Present
-                      </h3>
-                      <h4 class="timeline-title">Campus Ambassador</h4>
-                      <p class="timeline-text">
-                        Representing Phitron at DIU. Promoting programming
-                        education and organizing workshops for students.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Skills Section Start -->
-        <section class="skills section">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Skills</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="skills-content padd-15">
-                <h3 class="skills-group-title">Development Tools</h3>
-                <div class="row">
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                        alt="HTML5"
-                      />
-                      <span>HTML5</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                        alt="CSS3"
-                      />
-                      <span>CSS3</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                        alt="Tailwind"
-                      />
-                      <span>Tailwind</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                        alt="Bootstrap"
-                      />
-                      <span>Bootstrap</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                        alt="JavaScript"
-                      />
-                      <span>JavaScript</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                        alt="React"
-                      />
-                      <span>React</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                        alt="MySQL"
-                      />
-                      <span>MySQL</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                        alt="PostgreSQL"
-                      />
-                      <span>PostgreSQL</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                        alt="NoSQL"
-                      />
-                      <span>NoSQL</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                        alt="Django"
-                      />
-                      <span>Django</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                        alt="Express JS"
-                      />
-                      <span>Express JS</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                        alt="Redis"
-                      />
-                      <span>Redis</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
-                        alt="WebSocket"
-                      />
-                      <span>WebSocket</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                        alt="Git"
-                      />
-                      <span>Git</span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 class="skills-group-title">Machine Learning</h3>
-                <div class="row">
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                        alt="Python"
-                      />
-                      <span>Python</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
-                        alt="NumPy"
-                      />
-                      <span>NumPy</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
-                        alt="Pandas"
-                      />
-                      <span>Pandas</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg"
-                        alt="Matplotlib"
-                      />
-                      <span>Matplotlib</span>
-                    </div>
-                  </div>
-                  <div class="skill-card padd-15">
-                    <div class="skill-card-inner shadow-dark">
-                      <img
-                        src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg"
-                        alt="Seaborn"
-                      />
-                      <span>Seaborn</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Skills Section End -->
-        <!-- Projects Section Start -->
-        <section class="projects section">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Projects</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="project-item padd-15">
-                <div class="project-inner shadow-dark">
-                  <div class="project-img">
-                    <img
-                      src="images/screenshots/online_judge.png"
-                      alt="Semicolons Online Judge"
-                    />
-                  </div>
-                  <div class="project-info">
-                    <h4 class="project-title">Semicolons Online Judge</h4>
-                    <p class="project-desc">
-                      Online Judge Platform for C/C++ with real-time evaluation.
-                    </p>
-                    <div class="project-tags">
-                      <span>Django</span>
-                      <span>JavaScript</span>
-                      <span>Tailwind CSS</span>
-                      <span>+1</span>
-                    </div>
-                    <div class="project-btns">
-                      <a
-                        href="https://semicolons.pythonanywhere.com"
-                        target="_blank"
-                        class="btn project-btn"
-                        style="
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                        "
-                        >Live</a
-                      >
-                      <a href="#" class="btn project-btn outline">Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-item padd-15">
-                <div class="project-inner shadow-dark">
-                  <div class="project-img">
-                    <img
-                      src="images/screenshots/campuscart.png"
-                      alt="CampusCart"
-                    />
-                  </div>
-                  <div class="project-info">
-                    <h4 class="project-title">CampusCart</h4>
-                    <p class="project-desc">
-                      Marketplace for DIU students to buy/sell items securely.
-                    </p>
-                    <div class="project-tags">
-                      <span>Django</span>
-                      <span>JavaScript</span>
-                      <span>Tailwind CSS</span>
-                      <span>+1</span>
-                    </div>
-                    <div class="project-btns">
-                      <a href="#" class="btn project-btn">Live</a>
-                      <a href="#" class="btn project-btn outline">Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-item padd-15">
-                <div class="project-inner shadow-dark">
-                  <div class="project-img">
-                    <img src="images/screenshots/momentum.png" alt="Momentum" />
-                  </div>
-                  <div class="project-info">
-                    <h4 class="project-title">Momentum</h4>
-                    <p class="project-desc">
-                      Progress tracker for learners with growth analytics.
-                    </p>
-                    <div class="project-tags">
-                      <span>Django</span>
-                      <span>JavaScript</span>
-                      <span>Tailwind CSS</span>
-                      <span>+1</span>
-                    </div>
-                    <div class="project-btns">
-                      <a href="#" class="btn project-btn">Live</a>
-                      <a href="#" class="btn project-btn outline">Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Projects Section End -->
-        <!-- Achievements Section Start -->
-        <section class="achievements section">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Achievements</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="achievement-item padd-15">
-                <div class="achievement-inner shadow-dark">
-                  <div class="achievement-img">
-                    <img
-                      src="images/crest.jpg"
-                      alt="Platform Developer Recognition"
-                      style="object-fit: contain"
-                    />
-                  </div>
-                  <div class="achievement-info">
-                    <div class="achievement-icon">
-                      <i class="fa fa-trophy"></i>
-                    </div>
-                    <h4>Platform Developer Recognition</h4>
-                    <span>DIU CIS Department</span>
-                    <p>
-                      Recognized by the CIS Department of Daffodil International
-                      University for outstanding contribution in platform
-                      development.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="achievement-item padd-15">
-                <div class="achievement-inner shadow-dark">
-                  <div class="achievement-img">
-                    <img
-                      src="images/certificates/Ostad.jpg"
-                      alt="Full Stack Web Development Certificate"
-                    />
-                  </div>
-                  <div class="achievement-info">
-                    <div class="achievement-icon">
-                      <i class="fa fa-code"></i>
-                    </div>
-                    <h4>Full Stack Web Development</h4>
-                    <span>Ostad</span>
-                    <p>
-                      Completed Full Stack Web Development with Python, Django,
-                      and React, including backend, APIs, frontend, and
-                      deployment.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="achievement-item padd-15">
-                <div class="achievement-inner shadow-dark">
-                  <div class="achievement-img">
-                    <img
-                      src="images/certificates/signature_hackathon.png"
-                      alt="Signature Hackathon"
-                    />
-                  </div>
-                  <div class="achievement-info">
-                    <div class="achievement-icon">
-                      <i class="fa fa-code"></i>
-                    </div>
-                    <h4>Signature Hackathon</h4>
-                    <span>Presented by Programming Hero</span>
-                    <p>
-                      Participated and performed in the Signature Hackathon
-                      organized by Programming Hero, competing against top
-                      developers nationwide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Achievements Section End -->
-        <!-- Contact Section Start -->
-        <section class="contact section">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Get In Touch</h2>
-              </div>
-            </div>
-            <div class="row">
-              <!-- Left: Info -->
-              <div class="contact-info padd-15">
-                <h3>Let's Connect</h3>
-                <p>
-                  I'm interested in freelance projects, internships, and
-                  collaborations that help me grow my skills. If you have a
-                  project idea, need a helping hand, or just want to talk about
-                  technology, feel free to reach out!
-                </p>
-
-                <div class="contact-details">
-                  <div class="contact-detail-item">
-                    <div class="contact-detail-icon">
-                      <i class="fa fa-envelope"></i>
-                    </div>
-                    <div>
-                      <span class="contact-detail-label">Email</span>
-                      <span class="contact-detail-value"
-                        >abdnoman093@gmail.com</span
-                      >
-                    </div>
-                  </div>
-                  <div class="contact-detail-item">
-                    <div class="contact-detail-icon">
-                      <i class="fa fa-phone"></i>
-                    </div>
-                    <div>
-                      <span class="contact-detail-label">Phone</span>
-                      <span class="contact-detail-value">+880 1735-223693</span>
-                    </div>
-                  </div>
-                  <div class="contact-detail-item">
-                    <div class="contact-detail-icon">
-                      <i class="fa fa-map-marker"></i>
-                    </div>
-                    <div>
-                      <span class="contact-detail-label">Location</span>
-                      <span class="contact-detail-value"
-                        >Dhaka, Bangladesh</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right: Form -->
-              <div class="contact-form padd-15">
-                <h3>Send Mail</h3>
-                <form id="contact-form">
-                  <div class="form-group">
-                    <label>Your Name *</label>
-                    <input
-                      type="text"
-                      name="from_name"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Your Email *</label>
-                    <input
-                      type="email"
-                      name="from_email"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Subject *</label>
-                    <input
-                      type="text"
-                      name="subject"
-                      placeholder="What's this about?"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Message *</label>
-                    <textarea
-                      name="message"
-                      placeholder="Tell me about your project or just say hello..."
-                      required
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn"
-                    style="display: block; margin: 0 auto"
-                  >
-                    Send Mail
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Contact Section End -->
-
-        <!-- Footer -->
-        <footer class="footer">
-          <div class="container">
-            <p style="text-align: center">
-              © 2026 <span>Abdullah Al Noman</span>. All rights reserved.
-            </p>
-          </div>
-        </footer>
-        <!-- Footer End -->
-      </div>
-
-      <!-- Main Content End  -->
-    </div>
-
-    <!-- Style Switcher -->
-    <div class="style-switcher" id="style-switcher">
-      <h4>Theme Colors</h4>
-      <ul class="colors">
-        <li class="color-1" onclick="changeSkin('color-1')"></li>
-        <li class="color-2" onclick="changeSkin('color-2')"></li>
-        <li class="color-3" onclick="changeSkin('color-3')"></li>
-        <li class="color-4" onclick="changeSkin('color-4')"></li>
-        <li class="color-5" onclick="changeSkin('color-5')"></li>
-      </ul>
-    </div>
-    <!-- Switcher Fixed Buttons -->
-    <div class="switcher-btns">
-      <div class="s-icon style-switcher-toggler" id="switcher-toggler">
-        <i class="fas fa-cog fa-spin"></i>
-      </div>
-      <div class="s-icon day-night" id="day-night">
-        <i class="fas fa-moon"></i>
-      </div>
-    </div>
-
-    <!-- Mobile Fixed Buttons -->
-    <div class="mobile-fixed-btns">
-      <button class="mobile-fixed-btn" id="mobile-switcher-btn">
-        <i class="fas fa-cog fa-spin"></i>
-      </button>
-      <button class="mobile-fixed-btn" id="mobile-day-night">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
-
-    <!-- JS Files -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
 </html>
