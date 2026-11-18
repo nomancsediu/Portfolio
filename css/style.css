@@ -887,13 +887,60 @@ h1 {
 /* ------------------------------------------------------------------
    Contact form
    ------------------------------------------------------------------ */
-.contact-list { margin-top: 20px; }
+/* Contact: ways to reach me, then the form */
+.reach {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+.reach__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--surface-shadow);
+}
+.reach__item--main { border-top: 3px solid var(--lime); padding: 20px; }
+.reach__label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+.reach__value {
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px 0;
+  color: var(--ink);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+.reach__value:hover { color: var(--accent); text-decoration: underline; }
+.reach__item--main .reach__value { font-family: var(--mono); font-size: clamp(1rem, 0.9rem + 0.8vw, 1.3rem); }
+.reach__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+
+@media (min-width: 600px) {
+  .reach { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .reach__item--main { grid-column: 1 / -1; }
+}
+@media (max-width: 479px) {
+  .reach__actions .btn { flex: 1 1 140px; }
+}
+
+.copy-status { min-height: 1.4em; margin-top: 8px; font-size: var(--step--1); color: var(--live); }
+
+.form__head { display: grid; gap: 2px; }
+.form__note { font-size: var(--step--1); color: var(--ink-3); }
 
 .form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  margin-top: 36px;
+  margin-top: 20px;
   padding: 24px 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -932,7 +979,7 @@ h1 {
 
 @media (min-width: 640px) {
   .form { grid-template-columns: 1fr 1fr; padding: 28px; }
-  .form__title, .field--wide, .form__foot { grid-column: 1 / -1; }
+  .form__head, .field--wide, .form__foot { grid-column: 1 / -1; }
 }
 
 /* ------------------------------------------------------------------

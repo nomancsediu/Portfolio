@@ -126,6 +126,34 @@
       .finally(() => clearTimeout(timer));
   }
 
+  /* ---------------- Copy email address ---------------- */
+  const copyStatus = document.querySelector('.copy-status');
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    const label = btn.textContent;
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy;
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        ok = true;
+      } catch {
+        // Older browsers or blocked clipboard: fall back to a hidden textarea.
+        const ta = Object.assign(document.createElement('textarea'), { value: text });
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.append(ta);
+        ta.select();
+        try { ok = document.execCommand('copy'); } catch {}
+        ta.remove();
+      }
+      btn.textContent = ok ? 'Copied' : label;
+      if (copyStatus) {
+        copyStatus.textContent = ok ? `Copied ${text} to the clipboard.` : `Couldn't copy. Select the address above instead.`;
+      }
+      setTimeout(() => { btn.textContent = label; }, 2000);
+    });
+  });
+
   /* ---------------- Back to top ---------------- */
   const toTop = document.querySelector('.to-top');
   const heading = document.querySelector('h1');

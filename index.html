@@ -68,7 +68,6 @@
 
         <div class="actions">
           <a class="btn btn--primary" href="mailto:abdnoman093@gmail.com">Email me</a>
-          <a class="btn" href="assets/Abdullah_Al_Noman_Resume.pdf" download>Download resume</a>
         </div>
       </div>
 
@@ -358,16 +357,37 @@
         <!-- Contact -->
         <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact">
           <h2 class="panel__title">Contact</h2>
-          <p class="lede">I'm open to internships, backend and AI roles, and freelance work. Email gets the fastest reply.</p>
+          <p class="lede">Open to internships, backend and AI engineering roles, and freelance work. <strong>Email gets the fastest reply.</strong></p>
 
-          <dl class="contact-list">
-            <div><dt>Email</dt><dd><a href="mailto:abdnoman093@gmail.com">abdnoman093@gmail.com</a></dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+8801735223693">+880 1735-223693</a></dd></div>
-            <div><dt>LinkedIn</dt><dd><a href="https://linkedin.com/in/nomanit">linkedin.com/in/nomanit</a></dd></div>
-          </dl>
+          <ul class="reach">
+            <li class="reach__item reach__item--main">
+              <p class="reach__label">Email</p>
+              <a class="reach__value" href="mailto:abdnoman093@gmail.com">abdnoman093@gmail.com</a>
+              <div class="reach__actions">
+                <a class="btn btn--primary" href="mailto:abdnoman093@gmail.com">Write an email</a>
+                <button class="btn copy-btn" type="button" data-copy="abdnoman093@gmail.com">Copy address</button>
+              </div>
+            </li>
+            <li class="reach__item">
+              <p class="reach__label">Phone</p>
+              <a class="reach__value" href="tel:+8801735223693">+880 1735-223693</a>
+            </li>
+            <li class="reach__item">
+              <p class="reach__label">LinkedIn</p>
+              <a class="reach__value" href="https://linkedin.com/in/nomanit">in/nomanit</a>
+            </li>
+            <li class="reach__item">
+              <p class="reach__label">GitHub</p>
+              <a class="reach__value" href="https://github.com/nomancsediu">nomancsediu</a>
+            </li>
+          </ul>
+          <p class="copy-status" role="status" aria-live="polite"></p>
 
           <form class="form" id="contact-form" novalidate>
-            <h3 class="form__title">Or send a message from here</h3>
+            <div class="form__head">
+              <h3 class="form__title">Send a message</h3>
+              <p class="form__note">It goes straight to my inbox.</p>
+            </div>
             <div class="field">
               <label for="f-name">Your name</label>
               <input id="f-name" name="from_name" autocomplete="name" required>
@@ -401,7 +421,6 @@
         </div>
         <div class="foot__actions">
           <a class="btn btn--primary" href="mailto:abdnoman093@gmail.com">Email me</a>
-          <a class="btn btn--on-dark" href="assets/Abdullah_Al_Noman_Resume.pdf" download>Download resume</a>
         </div>
       </div>
 
