@@ -105,12 +105,13 @@
     if (!live || !ok || d.requests <= 0) return false;
     const fmt = new Intl.NumberFormat('en-US');
     const pct = d.errorRate * 100;
-    const set = (k, v) => { live.querySelector(`[data-stat="${k}"]`).textContent = v; };
+    const set = (k, v) => document.querySelectorAll(`[data-stat="${k}"]`).forEach((el) => { el.textContent = v; });
     set('days', String(d.days));
     set('requests', fmt.format(d.requests));
     set('visits', fmt.format(d.visits));
     set('errorRate', pct > 0 && pct < 0.01 ? '<0.01%' : `${pct.toFixed(2)}%`);
     live.hidden = false;
+    document.querySelectorAll('[data-live]').forEach((el) => { el.hidden = false; });
     return true;
   }
   window.__renderStats = renderStats; // handy for checking the layout by hand
